@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+import Dashboard from "./pages/dashboard/Dashboard";
+import Login from "./pages/login/Login";
+import ResetPassword from "./pages/reset-password/ResetPassword";
+import ForgotPassword from "./pages/forgot-password/ForgotPassword";
+import MainLayout from "./components/layout/MainLayout";
+import MinWidth from "./components/min-width/MinWidth";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {window.innerWidth > 768 ? (
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Login />} />
+            <Route path='/reset-password' element={<ResetPassword />} />
+            <Route path='/forgot-password' element={<ForgotPassword />} />
+            <Route path='/admin' element={<MainLayout />}>
+              <Route index element={<Dashboard/>} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      ): (
+        <>
+          <MinWidth />
+        </>
+      )}
+    </>
   );
 }
 
