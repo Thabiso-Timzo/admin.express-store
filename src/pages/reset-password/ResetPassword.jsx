@@ -23,7 +23,7 @@ const ResetPassword = () => {
                   id="pass"
                   />
               </div>
-              <div class="input-group flex-nowrap mt-20">
+              <div class="input-group flex-nowrap mt-3">
                 <span className="input-group-text" id="addon-wrapping"><HiLockClosed size={20} /></span>
                 <input 
                   type="password" 
@@ -34,7 +34,7 @@ const ResetPassword = () => {
                   id="email"
                   />
               </div>
-              <div className='d-flex justify-content-center'>
+              <div className='d-flex justify-content-center mt-3'>
                 <button type="submit" className="btn btn-primary mt-20 w-50">Reset password</button>
               </div>
             </form>

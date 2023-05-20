@@ -23,7 +23,7 @@ const ForgotPassword = () => {
                   id="email"
                 />
               </div>
-              <div className='d-flex justify-content-center'>
+              <div className='d-flex justify-content-center mt-3'>
                 <button type="submit" className="btn btn-primary mt-20 w-50">Submit</button>
               </div>
             </form>
