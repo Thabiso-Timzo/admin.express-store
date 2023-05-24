@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, Outlet } from 'react-router-dom';
+import { useNavigate, Outlet, Link } from 'react-router-dom';
 import { Button, Layout, Menu, theme } from 'antd';
 import { 
   AiOutlineDashboard, 
@@ -65,7 +65,7 @@ const MainLayout = () => {
               label: 'Catalog',
               children: [
                 {
-                  key: 'products',
+                  key: 'product',
                   icon: <AiOutlineShoppingCart />,
                   label: 'Add Product',
                 },
@@ -77,7 +77,7 @@ const MainLayout = () => {
                 {
                   key: 'brand',
                   icon: <TbBrandApple />,
-                  label: 'Brand',
+                  label: 'Add brand',
                 },
                 {
                   key: 'brand-list',
@@ -87,7 +87,7 @@ const MainLayout = () => {
                 {
                   key: 'category',
                   icon: <BiCategoryAlt />,
-                  label: 'Category',
+                  label: 'Add category',
                 },
                 {
                   key: 'category-list',
@@ -97,7 +97,7 @@ const MainLayout = () => {
                 {
                   key: 'color',
                   icon: <AiOutlineBgColors />,
-                  label: 'Color',
+                  label: 'Add color',
                 },
                 {
                   key: 'color-list',
@@ -169,13 +169,17 @@ const MainLayout = () => {
               <MdNotifications size={24} />
               <span className='badge bg-primary rounded-circle p-1 position-absolute'>3</span>
             </div>
-            <div className='d-flex gap-3 align-items-center'>
+            <div className="d-flex gap-3 align-items-center">
               <div>
                 <img src={thabiso} alt='' className='pro-image' />
               </div> 
-              <div>
+              <div role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                 <h5 className='mb-0'>Thabiso</h5>
                 <p className='mb-0'>thabiso.hlatshwayo24@gmail.com</p>
+              </div>
+              <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><Link className="dropdown-item py-1 mb-1" style={{ height: "auto", lineHeight: "20px"}} to="#">View profile</Link></li>
+                <li><Link className="dropdown-item py-1 mb-1" style={{ height: "auto", lineHeight: "20px"}} to="#">Signout</Link></li>
               </div>
             </div>
           </div>
