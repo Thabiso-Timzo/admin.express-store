@@ -55,7 +55,7 @@ const MainLayout = () => {
               label: 'Dashboard',
             },
             {
-              key: 'customer',
+              key: 'customers',
               icon: <AiOutlineUser />,
               label: 'Customer',
             },
@@ -119,7 +119,7 @@ const MainLayout = () => {
                 {
                   key: 'blog',
                   icon: <FaBlog />,
-                  label: 'Blog',
+                  label: 'Add blog',
                 },
                 {
                   key: 'blog-list',
@@ -129,7 +129,7 @@ const MainLayout = () => {
                 {
                   key: 'blog-category',
                   icon: <BiCategoryAlt />,
-                  label: 'Blog Category',
+                  label: 'Add blog Category',
                 },
                 {
                   key: 'blog-category-list',
