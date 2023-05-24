@@ -1,34 +1,12 @@
 :root {
   --color--white: #fff;
   --color-A9A9A9: #A9A9A9;
-}
-
-.trigger {
-  padding: 0 24px;
-  font-size: 18px;
-  line-height: 64px;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-.trigger:hover {
-  color: #1890ff;
-}
-
-.logo {
-  height: 31px;
-  margin: 16px;
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.ant-layout {
-  min-height: 100vh;
-}
-
-.mt-20 {
-  margin-top: 20px;
-}
-
-.w-100 {
-  width: 100%;
+  --color-black: #000;
+  --color-017D9E: #017D9E; 
+  --color-00DCFF: #00DCFF;
+  --color-0094B9: #0094B9;
+  --color-trans-1: rgba(255, 255, 255, 0.3);
+  --color-trans-2: rgb(0, 0, 0, 0.7);
+  --color-red: red;
+  --color-green: green;
 }
