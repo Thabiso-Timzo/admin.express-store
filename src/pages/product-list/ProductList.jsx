@@ -1,5 +1,6 @@
 import React from 'react'
 import { Table } from 'antd';
+//import { MdModeEditOutline, MdDelete } from 'react-icons/md'
 
 const columns = [
   {
